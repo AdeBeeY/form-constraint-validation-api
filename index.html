@@ -9,22 +9,27 @@
 <body>
   <h1>Constraint Validation API</h1>
 
-  <form action="#" id="validation" novalidate>
+  <form action="#" id="form" novalidate>
 
     <label for="email">Email:</label><br>
-    <input type="email" id="email" name="Email" placeholder="Email" required><br>
+    <input type="email" id="email" name="Email" data-label="Email Address" placeholder="Email" minlength="8">
+    <span class="error"></span><br>
 
     <label for="country">Country:</label><br>
-    <input type="text" id="country" name="Country" placeholder="Country" required><br>
+    <input type="text" id="country" name="Country" placeholder="Country" required>
+    <span class="error"></span><br>
     
     <label for="postal">Postal Code:</label><br>
-    <input type="number" id="postal" name="Postal Code" placeholder="Postal Code" required><br>
+    <input type="number" id="postal" name="Postal Code" data-label="postal code" placeholder="Postal Code" minlength="4" maxlength="6" required>
+    <span class="error"></span><br>
 
     <label for="password">Password:</label><br>
-    <input type="password" id="password" name="Password" placeholder="Password" required><br>
+    <input type="password" id="password" name="Password" placeholder="Password" required>
+    <span class="error"></span><br>
 
     <label for="confirm-password">Password Confirmation:</label><br>
-    <input type="password" id="confirm-password" name="Confirm Password" placeholder="Confirm Password" required><br>
+    <input type="password" id="confirm-password" name="Confirm Password" placeholder="Confirm Password" required>
+    <span class="error"></span><br>
 
     <button type="submit" class="submit js-submit-btn">Submit</button>
 

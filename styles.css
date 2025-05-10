@@ -1,8 +1,48 @@
 body {
-  background-color: purple;
-  color: white;
+  font: 1em sans-serif;
+  width: 500px;
+  padding: 0;
+  margin: 0 auto;
+  background-color: rgb(202, 186, 202);
 }
 
 label {
-  cursor: default;
+  font-size: 20px;
+}
+
+input[type="email"],
+[type="password"],
+[type="number"],
+[type="text"] {
+  appearance: none;
+
+  width: 100%;
+  border: 1px solid #333;
+  margin: 0;
+
+  font-family: inherit;
+  font-size: 90%;
+
+  box-sizing: border-box;
+}
+
+input:focus {
+  background-color: blanchedalmond;
+  color: black;
+}
+
+.error {
+  width: 100%;
+  padding: 0;
+
+  font-size: 80%;
+  color: white;
+  background-color: #900;
+  border-radius: 0 0 5px 5px;
+
+  box-sizing: border-box;
+}
+
+input:valid {
+  border: 3px dotted green;
 }
