@@ -18,7 +18,7 @@ email.addEventListener('input', (event) => {
   }
 })
 
-country.addEventListener('change', (event) => {
+country.addEventListener('input', (event) => {
   if (country.validity.valid) {
     countryError.textContent = '';
   } else {
@@ -26,7 +26,7 @@ country.addEventListener('change', (event) => {
   }
 })
 
-postalCode.addEventListener('change', (event) => {
+postalCode.addEventListener('input', (event) => {
   if (postalCode.validity.valid) {
     postalError.textContent = '';
   } else {
@@ -34,7 +34,7 @@ postalCode.addEventListener('change', (event) => {
   }
 })
 
-password.addEventListener('change', (event) => {
+password.addEventListener('input', (event) => {
   if (password.validity.valid) {
     passwordError.textContent = '';
   } else {
@@ -42,15 +42,15 @@ password.addEventListener('change', (event) => {
   }
 })
 
-confirmPassword.addEventListener('change', (event) => {
+confirmPassword.addEventListener('input', (event) => {
   if (confirmPassword.value === password.value) {
-    console.log(password.value);
-    console.log(confirmPassword.value);
+    // console.log(password.value);
+    // console.log(confirmPassword.value);
     confirmPasswordError.textContent = '';
   } else {
     confirmPasswordError.textContent = 'Not the same. Try again!';
-    console.log(password.value);
-    console.log(confirmPassword.value);
+    // console.log(password.value);
+    // console.log(confirmPassword.value);
   }
 })
 
@@ -74,3 +74,26 @@ function errorMsg(inputName, spanError) {
     spanError.textContent = "";
   }
 }
+
+form.addEventListener('submit', (event) => {
+  if (!email.validity.valid) {
+    errorMsg(email, emailError);
+    event.preventDefault();
+  }
+  if (!country.validity.valid) {
+    errorMsg(country, countryError);
+    event.preventDefault();
+  }
+  if (!postalCode.validity.valid) {
+    errorMsg(postalCode, postalError);
+    event.preventDefault();
+  }
+  if (!password.validity.valid) {
+    errorMsg(password, passwordError);
+    event.preventDefault();
+  }
+  if (confirmPassword.value !== password.value) {
+    confirmPasswordError.textContent = 'Not the same. Try again!';
+    event.preventDefault();
+  }
+});

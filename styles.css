@@ -26,10 +26,10 @@ input[type="email"],
   box-sizing: border-box;
 }
 
-input:focus {
+/* input:focus {
   background-color: blanchedalmond;
   color: black;
-}
+} */
 
 .error {
   width: 100%;
@@ -41,8 +41,4 @@ input:focus {
   border-radius: 0 0 5px 5px;
 
   box-sizing: border-box;
-}
-
-input:valid {
-  border: 3px dotted green;
 }
