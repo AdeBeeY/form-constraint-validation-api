@@ -62,7 +62,7 @@ function errorMsg(inputName, spanError) {
   const label = inputName.getAttribute('data-label') || inputName.name;
 
   if (inputName.validity.valueMissing) {
-    spanError.textContent = `${label} shouldn't be left blank`;
+    spanError.textContent = `${label} field is required. Don't leave it blank`;
 
   } else if (inputName.validity.typeMismatch) {
     spanError.textContent = `Enter a valid ${label}`;
@@ -96,7 +96,7 @@ form.addEventListener('submit', (event) => {
     event.preventDefault();
   }
   if (confirmPassword.value === '' || password.value === '') {
-    confirmPasswordError.textContent = 'Password should not be left blank!';
+    confirmPasswordError.textContent = 'Password field should not be left blank!';
   } else if (confirmPassword.value === password.value) {
     confirmPasswordError.textContent = '';
     confirmPassword.style = "background-color: green";
