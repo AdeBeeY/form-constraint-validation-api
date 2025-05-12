@@ -26,11 +26,6 @@ input[type="email"],
   box-sizing: border-box;
 }
 
-/* input:focus {
-  background-color: blanchedalmond;
-  color: black;
-} */
-
 .error {
   width: 100%;
   padding: 0;
