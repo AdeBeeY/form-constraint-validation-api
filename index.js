@@ -13,7 +13,6 @@ const confirmPasswordError = document.querySelector('#confirm-password + .error'
 email.addEventListener('input', (event) => {
   if (email.validity.valid) {
     emailError.textContent = '';
-    email.style = "color: green";
   } else {
     errorMsg(email, emailError);
   }
@@ -22,7 +21,6 @@ email.addEventListener('input', (event) => {
 country.addEventListener('input', (event) => {
   if (country.validity.valid) {
     countryError.textContent = '';
-    country.style = "color: green";
   } else {
     errorMsg(country, countryError);
   }
@@ -31,7 +29,6 @@ country.addEventListener('input', (event) => {
 postalCode.addEventListener('input', (event) => {
   if (postalCode.validity.valid) {
     postalError.textContent = '';
-    postalCode.style = "color: green";
   } else {
     errorMsg(postalCode, postalError);
   }
@@ -40,7 +37,7 @@ postalCode.addEventListener('input', (event) => {
 password.addEventListener('input', (event) => {
   if (password.validity.valid) {
     passwordError.textContent = '';
-    password.style = "background-color: green";
+    password.style = "color: yellow";
   } else {
     errorMsg(password, passwordError);
   }
@@ -51,7 +48,7 @@ confirmPassword.addEventListener('input', (event) => {
     confirmPasswordError.textContent = 'Password should not be left blank!';
   } else if (confirmPassword.value === password.value) {
     confirmPasswordError.textContent = '';
-    confirmPassword.style = "background-color: green";
+    confirmPassword.style = "color: yellow";
   } else {
     confirmPasswordError.textContent = 'Password is not the same! Try again!';
   }
@@ -99,7 +96,7 @@ form.addEventListener('submit', (event) => {
     confirmPasswordError.textContent = 'Password field should not be left blank!';
   } else if (confirmPassword.value === password.value) {
     confirmPasswordError.textContent = '';
-    confirmPassword.style = "background-color: green";
+    confirmPassword.style = "color: yellow";
   } else {
     confirmPasswordError.textContent = 'Password not the same!';
   }
